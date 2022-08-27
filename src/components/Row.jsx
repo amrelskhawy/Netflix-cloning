@@ -17,8 +17,6 @@ export const Row = ({title , fetchUrl, rowId}) => {
         slider.scrollLeft = orientation === 'right' ? slider.scrollLeft + 500 : slider.scrollLeft - 500
     }
 
-    console.log(movies)
-
     return (
         <div className='flex flex-col my-4 px-4 '>
             <h2 className='text-white md:text-xl py-4 font-bold'>{title}</h2>

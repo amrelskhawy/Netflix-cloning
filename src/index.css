@@ -15,6 +15,14 @@ body {
   @apply border bg-gray-300 text-black border-gray-300 py-2 px-5;
 }
 
+.signup-btn {
+  @apply bg-red-600 px-6 py-2 rounded text-white hover:bg-red-700 transition-all
+}
+
+.input-style {
+  @apply p-3 my-2 bg-gray-700 rounded outline-none
+}
+
 .arrow-style {
   @apply bg-white text-black rounded-full absolute z-[1] opacity-50 hover:opacity-100 cursor-pointer hidden group-hover:block
 }
