@@ -14,3 +14,7 @@ body {
 .main-btn {
   @apply border bg-gray-300 text-black border-gray-300 py-2 px-5;
 }
+
+.arrow-style {
+  @apply bg-white text-black rounded-full absolute z-[1] opacity-50 hover:opacity-100 cursor-pointer hidden group-hover:block
+}
