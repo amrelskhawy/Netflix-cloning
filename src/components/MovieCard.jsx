@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { FaHeart, FaRegHeart } from 'react-icons/fa'
+import { UserAuth } from '../context/AuthContext';
 
 export const MovieCard = ({ card }) => {
     const [checked, setChecked] = useState(false);
@@ -14,9 +15,9 @@ export const MovieCard = ({ card }) => {
             <img className='w-full h-auto block' src={`https://image.tmdb.org/t/p/original/${card.backdrop_path}`} alt={card.title} />
             <div className='absolute top-0 left-0 w-full h-full hover:bg-black/80 opacity-0 hover:opacity-100 text-white '>
                 <p className='white-space-normal text-xs md:text-sm font-bold flex justify-center items-center h-full transition text-center'>{card?.title}</p>
-                <span onClick={handleCheck} className=' absolute top-[12%] left-[7%]'>
+                {UserAuth.user && <span onClick={handleCheck} className=' absolute top-[12%] left-[7%]'>
                     {checked ? <FaHeart /> : <FaRegHeart />}
-                </span>
+                </span>}
             </div>
         </div>
     )
